@@ -32,6 +32,6 @@ aufraeumen.sh xxx
 - Ruft die drei Programme auf und gibt den Parameter "irgendingen,  gechingen oder bondorf" weiter
 
 eingabetest.sh xxx
-- Prueft ob als Eingabeparemter ein Wert irgendingen,  gechingen oder bondorf gestzt ist. 
+- Prueft ob als Eingabeparemter ein Wert irgendingen,  gechingen oder bondorf gesetzt ist. 
 - Wenn nicht kommt Exit 55 und das Programm bricht mit Fehlermeldung ab 
 
