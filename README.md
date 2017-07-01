@@ -12,7 +12,7 @@ Inhalt
 Aufruf:
 
 - Alle sind mit einem Parameter xxx =  irgendingen,  gechingen oder bondorf aufrufbar.
-Ohne diesen Parameter (oder einen anderen) machen sie gar nichts (außer echo )
+- Ohne diesen Parameter (oder einen anderen) machen sie gar nichts (außer echo )
 
 bash aufraeumen.sh xxx 
 
@@ -29,7 +29,7 @@ Es werden fehlende mp4 erzeugt
 
 delkruschtX.sh xxx
 
-Alle files kleiner als ca. 10 MB werden ins videoarchiv gemovt 
+- Alle files kleiner als ca. 10 MB werden ins videoarchiv gemovt 
 
 deloldarchivX.sh xxx
 
