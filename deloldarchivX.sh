@@ -18,21 +18,14 @@ typeset -i alter=0
 typeset -i maxalter=0
 typeset -i MaxDatAlter=100   # VORGABE: Maximales erlaubtes Alter der Datei in Archiv (in Tagen)
 
+#Sicherheitsausgang
+bash eingabetest.sh $1
+if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 
 # 1.) Einstellungen
 echo " 1.) Vorgaben "
 echo "Parameter 1" $1
-
-# Sicherheitsausgang
-if [ "$1" == "irgendingen" ] || [ "$1" == "gechingen" ] || [ "$1" == "bondorf" ]
- then
-  #Parameter stimmt
-  echo  "Parameter " $1 "ist ok -> weiter"
- else
-    echo "Parameter " $1 "ist nicht erlaubt -> Ende"
-    exit 1  #Notausgang
- fi
 
 #archiv="/home/rarents/videoarchiv/irgendingen/*"   # Vorgabe: archiv, in dem die alten Files gelöscht werden sollen
 archiv="/home/rarents/videoarchiv/"$1"/*"
@@ -55,7 +48,7 @@ for File in $archiv
 
  #letzte 4 zeichen
   Teil=${File: -4}
-#  echo $Teil
+ echo "letzte 4 Zeichen des Files= " $Teil
   # files mit Endung mp4 oder flv suchen
   if [ $Teil == ".flv" ] || [ $Teil == ".mp4" ]
     then

@@ -16,7 +16,9 @@ typeset -i delta=0
 typeset -i alter=0
 typeset -i MaxGr=1000
 
-
+#Sicherheitsausgang
+bash eingabetest.sh $1
+if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 # 1.) Einstellungen
 echo " 1.) Vorgaben "
@@ -24,17 +26,6 @@ echo " 1.) Vorgaben "
 #archiv="/home/rarents/videoarchiv/irgendingen"
 pfad="/video_recordings/"$1"/*"
 archiv="/home/rarents/videoarchiv/"$1
-
-
-#Sicherheitsausgang
-if [ "$1" == "irgendingen" ] || [ "$1" == "gechingen" ] || [ "$1" == "bondorf" ]
- then
-  #Parameter stimmt
-  echo  "Parameter " $1 "ist ok -> weiter"
- else
-    echo "Parameter " $1 "ist nicht erlaubt -> Ende"
-    exit 1  #Notausgang
- fi
 
 
 echo "pfad in dem gesucht wird=  " $pfad

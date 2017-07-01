@@ -23,24 +23,15 @@ typeset -i alter=0
 typeset -i maxalter=0
 typeset -i MaxAnzDat=10   # VORGABE: Maximale Anzahl Dateien, die uebrig bleiben sollen
 
-
+#Sicherheitsausgang
+bash eingabetest.sh $1
+if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 # 1.) Einstellungen
 echo " 1.) Vorgaben "
 #pfadflv="/video_recordings/irgendingen/*"   # VORGABE:    Verzeichnis1 in dem stehen die .flvs (mit /* hinten)
 #pfadmp4="/video_recordings/irgendingen"   # VORGABE:    Verzeichnis2 in dem stehen die .mp4s
 #archiv="/home/rarents/videoarchiv/irgendingen"   # Vorgabe: Verzeichnis in dem die gelöschten Files rein kommen
-
-
-#Sicherheitsausgang
-if [ "$1" == "irgendingen" ] || [ "$1" == "gechingen" ] || [ "$1" == "bondorf" ]
- then
-  #Parameter stimmt
-  echo  "Parameter " $1 "ist ok -> weiter"
- else
-    echo "Parameter " $1 "ist nicht erlaubt -> Ende"
-    exit 1  #Notausgang
- fi
 
 
 pfadflv="/video_recordings/"$1"/*"
@@ -59,13 +50,12 @@ echo " "
 # 2.) Schleife in Verzeichnis üeber alle .flvs 
 echo "2.) Alle flvs finden"
 echo " "
-exit 1
 alle=0
 lauf=0 
 for File in $pfadflv
  do
  alle=alle+1
-# echo "$File" , $lauf
+ echo "$File" , $lauf
  #letzte 4 zeichen
   Teil=${File: -4}
 #  echo $Teil
@@ -111,10 +101,10 @@ lauf=0
 for File in $pfadflv
  do
  alle=alle+1
-#  echo "$File" , $lauf
+echo "$File" , $lauf
  #letzte 4 zeichen
   Teil=${File: -4}
-#  echo $Teil
+echo "letzte 4 Zeichen des Files= " $Teil
   # files mit Endung teststr suchen
   if [ $Teil == $teststr ]
     then
