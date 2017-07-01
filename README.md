@@ -2,7 +2,6 @@
 Defines needed scripts to administrate the created streaming videos on our contabo server
 
 Inhalt
-
 archivierenX.sh
 delkruschtX.sh
 deloldarchivX.sh
