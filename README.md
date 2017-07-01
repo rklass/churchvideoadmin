@@ -11,35 +11,35 @@ Inhalt
 
 Aufruf:
 
-  Alle sind mit einem Parameter xxx =  irgendingen,  gechingen oder bondorf aufrufbar 
-  Ohne diesen Parameter (oder einen anderen) machen sie gar nichts (außer echo )
+- Alle sind mit einem Parameter xxx =  irgendingen,  gechingen oder bondorf aufrufbar.
+Ohne diesen Parameter (oder einen anderen) machen sie gar nichts (außer echo )
 
 bash aufraeumen.sh xxx 
 
-Startet alle 3 anderen Programme und gibt den Parameter xxx (=irgendingen,  gechingen oder bondorf) weiter
+- Startet alle 3 anderen Programme und gibt den Parameter xxx (=irgendingen,  gechingen oder bondorf) weiter
 
 Funktionsweise:
 
-  Mit dem Parameter passiert fuer die entsprechende Location folgendes
+- Mit dem Parameter passiert fuer die entsprechende Location folgendes
 
 archivieren.sh xxx
 
-  Es werden fehlende mp4 erzeugt
-  Es wird der älteste File mp4 und flv ins Verzeichnis videoarchiv gemovt (mv), wenn mehr als 10 drin waren
+Es werden fehlende mp4 erzeugt
+- Es wird der älteste File mp4 und flv ins Verzeichnis videoarchiv gemovt (mv), wenn mehr als 10 drin waren
 
 delkruschtX.sh xxx
 
-  Alle files kleiner als ca. 10 MB werden ins videoarchiv gemovt 
+Alle files kleiner als ca. 10 MB werden ins videoarchiv gemovt 
 
 deloldarchivX.sh xxx
 
-  Alle files mit Endung mp4 oder flv werden im videoarchiv geloescht (rm -f),  wenn sie aelter als 100 Tage sind.
+- Alle files mit Endung mp4 oder flv werden im videoarchiv geloescht (rm -f),  wenn sie aelter als 100 Tage sind.
 
 aufraeumen.sh xxx
 
-  ruft die drei Programme auf und gibt den Parameter "irgendingen,  gechingen oder bondorf" weiter
+- Ruft die drei Programme auf und gibt den Parameter "irgendingen,  gechingen oder bondorf" weiter
 
 eingabetest.sh xxx
 
-  prueft ob als Eingabeparemter ein Wert irgendingen,  gechingen oder bondorf gestzt ist. Wenn nicht kommt Exit 55 und das Programm bricht mit Fehlermeldung ab 
+- Prueft ob als Eingabeparemter ein Wert irgendingen,  gechingen oder bondorf gestzt ist. Wenn nicht kommt Exit 55 und das Programm bricht mit Fehlermeldung ab 
 
