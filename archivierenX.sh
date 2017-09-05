@@ -24,7 +24,8 @@ typeset -i maxalter=0
 typeset -i MaxAnzDat=10   # VORGABE: Maximale Anzahl Dateien, die uebrig bleiben sollen
 
 #Sicherheitsausgang
-bash eingabetest.sh $1
+bash /home/rarents/eingabetest.sh $1
+
 if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 # 1.) Einstellungen
