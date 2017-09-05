@@ -1,11 +1,11 @@
 #! /bin/bash
 # Das Programm geht durch alle Dateien in Verzeichnis1 und sucht dort die Datei$
-# Wenn eine Datei kleiner als MaxGr ist, wird sie gelöscht
+# Wenn eine Datei kleiner als MaxGr ist, wird sie gelÃ¶scht
 # Gleichzeitug werden auch die korrespondierenden mp4s in Verzeichnis2 geloesch$
-# Es müssen 3 Vorgaben eingestellt werden
-#  MaxGr........ Daeitgrösse in KB unterhalb der die Datei geloescht wird
+# Es mÃ¼ssen 3 Vorgaben eingestellt werden
+#  MaxGr........ DaeitgrÃ¶sse in KB unterhalb der die Datei geloescht wird
 #  pfadflv............  Pfad des Verzeichnis1 mit den Dateien
-# der wird über parameter 1 vorgegeben
+# der wird Ã¼ber parameter 1 vorgegeben
 #      -->  Viel Spass <--     Reinhold Klass
 
 typeset -i i=0
@@ -17,7 +17,7 @@ typeset -i alter=0
 typeset -i MaxGr=1000
 
 #Sicherheitsausgang
-bash eingabetest.sh $1
+bash /home/rarents/eingabetest.sh $1
 if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 # 1.) Einstellungen
@@ -33,7 +33,7 @@ echo " "
 echo " "
 echo "archiv=   " $archiv
 echo " "
-# 2.) Schleife in Verzeichnis üeber alle Dateien in dem Verzeichnis
+# 2.) Schleife in Verzeichnis Ã¼eber alle Dateien in dem Verzeichnis
 echo "2.) Alle Dateien suchen"
 alle=0
 lauf=0
@@ -47,7 +47,7 @@ then
  echo "     -> wird ins Archiv geschoben "
  mv $File $archiv
 else
- echo "     -> file hat Mindestgr�oesse und bleibt"
+ echo "     -> file hat MindestgrÃoesse und bleibt"
 fi
 
   done
