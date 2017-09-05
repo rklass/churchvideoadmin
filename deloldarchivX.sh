@@ -19,7 +19,7 @@ typeset -i maxalter=0
 typeset -i MaxDatAlter=100   # VORGABE: Maximales erlaubtes Alter der Datei in Archiv (in Tagen)
 
 #Sicherheitsausgang
-bash eingabetest.sh $1
+bash /home/rarents/eingabetest.sh $1
 if [ $? -gt 0 ]; then echo "rausgehen "; exit 55; fi
 
 
