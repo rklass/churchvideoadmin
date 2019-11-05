@@ -1,6 +1,7 @@
 #!/bin/bash
 #Sicherheitsausgang
-if [ "$1" == "irgendingen" ] || [ "$1" == "gechingen" ] || [ "$1" == "bondorf" ]
+wo="/home/rarents"
+if grep -qw "$1" "$wo/mandanten.txt"
  then
   #Parameter stimmt
   echo  "Parameter " $1 "ist ok -> weiter"
