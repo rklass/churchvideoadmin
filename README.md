@@ -7,10 +7,17 @@ Inhalt
 - deloldarchivX.sh
 - aufraeumen.sh
 - eingabetest.sh
+- START.sh
+- mandanten.txt
 
 Aufruf:
-- Alle sind mit einem Parameter xxx =  irgendingen,  gechingen oder bondorf aufrufbar.
+- Alle Programme *X.sh sind mit einem Parameter xxx =  irgendingen,  gechingen oder ..... aufrufbar.
 - Ohne diesen Parameter (oder einen anderen) machen sie gar nichts (außer echo )
+- START.sh: ruft aufraeumen.sh xxx  fuer alle Mandanten xxx auf, die in mandanten.txt stehen
+- Wichtig: alle scripte stehen in /home/rarents
+
+mandanten.txt
+- ist eine Liste, in jeder Zeile steht der Name eines Mandanten (immer klein geschrieben, Bsp. gechingen)
 
 bash aufraeumen.sh xxx 
 - Startet alle 3 anderen Programme und gibt den Parameter xxx (=irgendingen,  gechingen oder bondorf) weiter
@@ -32,6 +39,5 @@ aufraeumen.sh xxx
 - Ruft die drei Programme auf und gibt den Parameter "irgendingen,  gechingen oder bondorf" weiter
 
 eingabetest.sh xxx
-- Prueft ob als Eingabeparemter ein Wert irgendingen,  gechingen oder bondorf gesetzt ist. 
+- Prueft ob als Eingabeparemter ein Wert einer Zeile in mandanten.txt steht (z.B. irgendingen oder ...) 
 - Wenn nicht kommt Exit 55 und das Programm bricht mit Fehlermeldung ab 
-
