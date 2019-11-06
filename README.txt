@@ -25,7 +25,7 @@ bash aufraeumen.sh xxx
 Funktionsweise:
 - Mit dem Parameter passiert fuer die entsprechende Location folgendes
 
-archivieren.sh xxx
+archivierenX.sh xxx
 - Es werden fehlende mp4 erzeugt bei den flvs, wo es noch keinen gab
 - Es wird der älteste File mp4 und flv ins Verzeichnis videoarchiv gemovt (mv), wenn mehr als 10 drin waren
 
