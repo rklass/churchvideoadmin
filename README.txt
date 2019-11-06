@@ -1,6 +1,16 @@
 # churchvideoadmin
 Defines needed scripts to administrate the created streaming videos on our contabo server
 
+Aenderungen am 4.11.2019 durch RK
+- eingabetest.sh wurde umgebaut, sucht nin die gueltigen Strings in mandanten.txt
+- mandanten.text wurde zugefuegt mit den 6 heutigen Mandanten (ohne elkw und demo)
+- das alte eingabetest steht auf eingabetest.shalt
+- START.sh wurde zugefuegt, ruft aufraeumen in eine Schleife ueber alle Mandanten aus mandanten.txt auf
+- die Dateien START.sh, mandanten.sh, eingabetest.sh wurden mit chmod 777 behandelt
+- sudo crontab -e wurde geaendert: die Eintelaufrufe auskommentiert, START.sh eingebaut
+- das Programm aufra√eumen.sh prueft erst mal, ob im Verzeichnis /video-recordings/ √ºberhaupt files drin sind, befor das aufraeumen startet
+
+
 Inhalt
 - archivierenX.sh
 - delkruschtX.sh
